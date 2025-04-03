@@ -1,16 +1,20 @@
-# This is a sample Python script.
+import tkinter as tk
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+window = tk.Tk()
+window.geometry("600x300")
+window.title("Calculator App")
 
+num1 = tk.Label(text="Enter 1st Number: ")
+num1.grid(column=0, row=0)
+num1Entry = tk.Entry()
+num1Entry.grid(column=1, row=0)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+num2 = tk.Label(text="Enter 2nd Number: ")
+num2.grid(column=0, row=1)
+num2Entry = tk.Entry()
+num2Entry.grid(column=1, row=1)
 
+button = tk.Button(window, text="Calculate Sum")
+button.grid(column=1, row=2)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+window.mainloop()
